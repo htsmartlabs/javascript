@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    <p>Enter a:</p>
+                </td>
+                <td>
+                    <input type="text" id="a">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Enter b:</p>
+                </td>
+                <td>
+                    <input type="text" id="b">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Total:</p>
+                </td>
+                <td>
+                    <input type="text" id="c">
+                </td>
+            </tr>
+            <tr>
+                <td>   
+                    <button id="add" type="button" onclick="calc('+')">Addition </button>
+                </td>
+                <td>   
+                    <button id="sub" type="button" onclick="calc('-')">Subtraction</button>
+                </td>
+            </tr>
+            <tr>
+                <td>   
+                    <button id="mul" type="button" onclick="calc('x')">Multiplication </button>
+                </td>
+                <td>   
+                    <button id="div" type="button" onclick="calc('/')">Division</button>
+                </td>
+            </tr>        
+        </table>
+        <script>
+            function calc(s){
+                x=document.getElementById("a").value;
+                y=document.getElementById("b").value;
+                if(s=="+"){
+                    z = parseInt(x) + parseInt(y);
+                }else if(s=="-"){
+                    z = parseInt(x) - parseInt(y);
+                }else if(s=="x"){
+                    z = parseInt(x) * parseInt(y);
+                }else if(s=="/"){
+                    z = parseInt(x) / parseInt(y);                    
+                }
+                document.getElementById("c").value=z;
+            }
+/*
+            function add(){
+            }
+
+            function sub(){
+                x=document.getElementById("a").value;
+                y=document.getElementById("b").value;
+                z = parseInt(x) - parseInt(y);
+                document.getElementById("c").value=z;
+            }
+            function mul(){
+                x=document.getElementById("a").value;
+                y=document.getElementById("b").value;
+                z = parseInt(x) * parseInt(y);
+                document.getElementById("c").value=z;
+            }
+            function div(){
+                x=document.getElementById("a").value;
+                y=document.getElementById("b").value;
+                z = parseInt(x) / parseInt(y);
+                document.getElementById("c").value=z;
+            }*/
+        </script> 
+    </body>
+</html>
